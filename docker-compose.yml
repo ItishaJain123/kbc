@@ -7,7 +7,7 @@ services:
     ports:
       - '10500:3000'
     command: "serve -s /app/build -p 3000"
+    # command: npm start
     volumes:
       - './src:/app/src'
       - './public:/app/public'
-    # command: npm start
