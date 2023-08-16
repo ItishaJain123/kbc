@@ -1,0 +1,13 @@
+version: '3.3'
+services:
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - '10500:3000'
+    command: "serve -s /app/build -p 3000"
+    volumes:
+      - './src:/app/src'
+      - './public:/app/public'
+    # command: npm start
